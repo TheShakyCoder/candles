@@ -27,7 +27,7 @@ const navLinks = page.props.site.nav_links;
 
     <Head :title="site.fullname" />
 
-    <div class="font-sans antialiased text-warm-800 bg-white">
+    <div class="font-sans antialiased text-warm-800 bg-cream-50">
 
         <Header :navLinks="navLinks" :canLogin="canLogin" :canRegister="canRegister" />
 
@@ -37,22 +37,22 @@ const navLinks = page.props.site.nav_links;
         <!-- STATS -->
         <Stats />
 
-        <!-- ABOUT -->
+        <!-- OUR STORY -->
         <About />
 
-        <!-- SERVICES -->
+        <!-- COLLECTIONS -->
         <Services />
 
-        <!-- EYEWEAR & BRANDS -->
+        <!-- BESTSELLERS -->
         <Events />
 
-        <!-- NEWS -->
+        <!-- JOURNAL -->
         <News />
 
-        <!-- INSTAGRAM FEED -->
+        <!-- INSTAGRAM -->
         <InstagramFeed />
 
-        <!-- BOOK AN EYE TEST CTA -->
+        <!-- NEWSLETTER CTA -->
         <Volunteer />
 
         <!-- CONTACT -->

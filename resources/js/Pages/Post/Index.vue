@@ -29,7 +29,7 @@ function tagColour(index) {
 </script>
 
 <template>
-    <Head title="News &amp; Updates — Acme Opticians" />
+    <Head title="Journal — Acme Candles" />
 
     <div class="font-sans antialiased text-warm-800 bg-white">
 
@@ -60,14 +60,15 @@ function tagColour(index) {
                     <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
-                    <span class="text-white/80">News &amp; Updates</span>
+                    <span class="text-white/80">Journal</span>
                 </nav>
 
-                <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-                    News &amp; Updates
+                <p class="eyebrow text-accent-200 mb-4">The Journal</p>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-4 tracking-display">
+                    Notes from the workshop
                 </h1>
                 <p class="text-white/75 text-lg max-w-xl leading-relaxed">
-                    The latest stories, eye care advice and announcements from Acme Opticians.
+                    Seasonal fragrance notes, behind-the-pour stories and the small rituals that make our candles what they are.
                 </p>
             </div>
 
