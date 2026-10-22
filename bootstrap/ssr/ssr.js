@@ -94,7 +94,9 @@ function f(t) {
 		} }), i(n, t);
 	}, f(t);
 }
-var c = String.prototype.replace, a = /%20/g, l = {
+var c = String.prototype.replace;
+var a = /%20/g;
+var l = {
 	RFC1738: function(t) {
 		return c.call(t, a, "+");
 	},
@@ -103,7 +105,9 @@ var c = String.prototype.replace, a = /%20/g, l = {
 	}
 };
 var s = "RFC3986";
-var p = Object.prototype.hasOwnProperty, y = Array.isArray, d = /* @__PURE__ */ new WeakMap();
+var p = Object.prototype.hasOwnProperty;
+var y = Array.isArray;
+var d = /* @__PURE__ */ new WeakMap();
 var b = function(t, e) {
 	return d.set(t, e), t;
 };
@@ -112,18 +116,21 @@ function v(t) {
 }
 var h$1 = function(t) {
 	return d.get(t);
-}, m = function(t, e) {
+};
+var m = function(t, e) {
 	d.set(t, e);
 };
 var g = function() {
 	const t = [];
 	for (let e = 0; e < 256; ++e) t.push("%" + ((e < 16 ? "0" : "") + e.toString(16)).toUpperCase());
 	return t;
-}(), w = function(t, e) {
+}();
+var w = function(t, e) {
 	const n = e && e.plainObjects ? Object.create(null) : {};
 	for (let e = 0; e < t.length; ++e) void 0 !== t[e] && (n[e] = t[e]);
 	return n;
-}, j = function t(e, n, r) {
+};
+var j = function t(e, n, r) {
 	if (!n) return e;
 	if ("object" != typeof n) {
 		if (y(e)) e.push(n);
@@ -156,21 +163,26 @@ var g = function() {
 		const i = n[o];
 		return e[o] = p.call(e, o) ? t(e[o], i, r) : i, e;
 	}, c);
-}, O = 1024, E = function(t, e, n, r) {
+};
+var O = 1024;
+var E = function(t, e, n, r) {
 	if (v(t)) {
 		var o = h$1(t) + 1;
 		return t[o] = e, m(t, o), t;
 	}
 	var i = [].concat(t, e);
 	return i.length > n ? b(w(i, { plainObjects: r }), i.length - 1) : i;
-}, T = function(t, e) {
+};
+var T = function(t, e) {
 	if (y(t)) {
 		const n = [];
 		for (let r = 0; r < t.length; r += 1) n.push(e(t[r]));
 		return n;
 	}
 	return e(t);
-}, R = Object.prototype.hasOwnProperty, k = {
+};
+var R = Object.prototype.hasOwnProperty;
+var k = {
 	brackets: function(t) {
 		return t + "[]";
 	},
@@ -181,9 +193,14 @@ var g = function() {
 	repeat: function(t) {
 		return t;
 	}
-}, S = Array.isArray, I = Array.prototype.push, A = function(t, e) {
+};
+var S = Array.isArray;
+var I = Array.prototype.push;
+var A = function(t, e) {
 	I.apply(t, S(e) ? e : [e]);
-}, D = Date.prototype.toISOString, $ = {
+};
+var D = Date.prototype.toISOString;
+var $ = {
 	addQueryPrefix: !1,
 	allowDots: !1,
 	allowEmptyArrays: !1,
@@ -219,7 +236,9 @@ var g = function() {
 	},
 	skipNulls: !1,
 	strictNullHandling: !1
-}, N = {}, _ = function(t, e, n, r, o, i, u, f, c, a, l, s, p, y, d, b, v, h) {
+};
+var N = {};
+var _ = function(t, e, n, r, o, i, u, f, c, a, l, s, p, y, d, b, v, h) {
 	let m = t, g = h, w = 0, j = !1;
 	for (; void 0 !== (g = g.get(N)) && !j;) {
 		const e = g.get(t);
@@ -259,7 +278,10 @@ var g = function() {
 		k.set(N, h), A(E, _(j, T, n, r, o, i, u, f, "comma" === n && b && S(m) ? null : c, a, l, s, p, y, d, b, v, k));
 	}
 	return E;
-}, x = Object.prototype.hasOwnProperty, C = Array.isArray, P = {
+};
+var x = Object.prototype.hasOwnProperty;
+var C = Array.isArray;
+var P = {
 	allowDots: !1,
 	allowEmptyArrays: !1,
 	allowPrototypes: !1,
@@ -287,13 +309,16 @@ var g = function() {
 	parseArrays: !0,
 	plainObjects: !1,
 	strictNullHandling: !1
-}, Z = function(t) {
+};
+var Z = function(t) {
 	return t.replace(/&#(\d+);/g, function(t, e) {
 		return String.fromCharCode(parseInt(e, 10));
 	});
-}, F = function(t, e) {
+};
+var F = function(t, e) {
 	return t && "string" == typeof t && e.comma && t.indexOf(",") > -1 ? t.split(",") : t;
-}, U = function(t, e, n, r) {
+};
+var U = function(t, e, n, r) {
 	if (!t) return;
 	const o = n.allowDots ? t.replace(/\.([^.[]+)/g, "[$1]") : t, i = /(\[[^[\]]*])/g;
 	let u = n.depth > 0 && /(\[[^[\]]*])/.exec(o);
@@ -405,7 +430,7 @@ function q(t, e) {
 		}(e), t;
 	}(o);
 }
-var K = /* @__PURE__ */ function() {
+var K = /*#__PURE__*/ function() {
 	function t(t, e, n) {
 		var r, o;
 		this.name = t, this.definition = e, this.bindings = null != (r = e.bindings) ? r : {}, this.wheres = null != (o = e.wheres) ? o : {}, this.config = n;
@@ -461,7 +486,8 @@ var K = /* @__PURE__ */ function() {
 			}
 		}
 	]);
-}(), z = /* @__PURE__ */ function(t) {
+}();
+var z = /*#__PURE__*/ function(t) {
 	function r(e, r, o, i) {
 		var u;
 		if (void 0 === o && (o = !0), (u = t.call(this) || this).t = null != i ? i : "undefined" != typeof Ziggy ? Ziggy : null == globalThis ? void 0 : globalThis.Ziggy, !u.t && "undefined" != typeof document && document.getElementById("ziggy-routes-json") && (globalThis.Ziggy = JSON.parse(document.getElementById("ziggy-routes-json").textContent), u.t = globalThis.Ziggy), u.t = n({}, u.t, { absolute: o }), e) {
@@ -644,7 +670,7 @@ var K = /* @__PURE__ */ function() {
 			}
 		}
 	]);
-}(/* @__PURE__ */ f(String));
+}(/*#__PURE__*/ f(String));
 function B(t, e, n, r) {
 	var o = new z(t, e, n, r);
 	return t ? o.toString() : o;
@@ -657,70 +683,70 @@ var M = { install: function(t, e) {
 } };
 //#endregion
 //#region resources/js/ssr.js
-var appName = "Lollipops";
+var appName = "candles";
 createServer((page) => createInertiaApp({
 	page,
 	render: renderToString,
 	title: (title) => `${title} - ${appName}`,
-	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* @__PURE__ */ Object.assign({
-		"./Pages/Admin/Dashboard.vue": () => import("./assets/Dashboard-D2_KQ3YR.js"),
-		"./Pages/Admin/Role/Create.vue": () => import("./assets/Create-DKoWNMPi.js"),
-		"./Pages/Admin/Role/Index.vue": () => import("./assets/Index-BAXG3HT_.js"),
-		"./Pages/Admin/Role/Right/Index.vue": () => import("./assets/Index-Bn2Z2ivB.js"),
-		"./Pages/Admin/Role/Right/Partials/Groups.vue": () => import("./assets/Groups-DlEQjHJh.js"),
-		"./Pages/Admin/Role/Show.vue": () => import("./assets/Show-BuI0PF1c.js"),
-		"./Pages/Admin/User/Edit.vue": () => import("./assets/Edit-DRLFg7QC.js"),
-		"./Pages/Admin/User/Index.vue": () => import("./assets/Index-DBmlwg_1.js"),
-		"./Pages/Admin/User/Roles/Index.vue": () => import("./assets/Index-D3Cw3e2i.js"),
-		"./Pages/Auth/ConfirmPassword.vue": () => import("./assets/ConfirmPassword-DhV9uUPS.js"),
-		"./Pages/Auth/ForgotPassword.vue": () => import("./assets/ForgotPassword-DrFNmBa8.js"),
-		"./Pages/Auth/Login.vue": () => import("./assets/Login-CoD0i86O.js"),
-		"./Pages/Auth/Register.vue": () => import("./assets/Register-DhvuxS_R.js"),
-		"./Pages/Auth/ResetPassword.vue": () => import("./assets/ResetPassword-Do2MXRrs.js"),
-		"./Pages/Auth/VerifyEmail.vue": () => import("./assets/VerifyEmail-BjX_R_e_.js"),
-		"./Pages/Calendar/Index.vue": () => import("./assets/Index-Ddsgilch.js"),
-		"./Pages/Competition/Index.vue": () => import("./assets/Index-Bl8wyxyU.js"),
-		"./Pages/Competition/Show.vue": () => import("./assets/Show-CzchcmEY.js"),
-		"./Pages/Home/Index.vue": () => import("./assets/Index-C38GYLzI.js"),
-		"./Pages/Home/Partials/About.vue": () => import("./assets/About-BkM7GDVg.js"),
-		"./Pages/Home/Partials/Contact.vue": () => import("./assets/Contact-BzCYbu2u.js"),
-		"./Pages/Home/Partials/Events.vue": () => import("./assets/Events-CZLLrZo0.js"),
-		"./Pages/Home/Partials/Hero.vue": () => import("./assets/Hero-Bo2_QkKW.js"),
-		"./Pages/Home/Partials/News.vue": () => import("./assets/News-ifNNDIiE.js"),
-		"./Pages/Home/Partials/Services.vue": () => import("./assets/Services-Bmc_NE7_.js"),
-		"./Pages/Home/Partials/Stats.vue": () => import("./assets/Stats-IXWOCs3x.js"),
-		"./Pages/Home/Partials/Volunteer.vue": () => import("./assets/Volunteer-D9Z9w-s9.js"),
-		"./Pages/Internal/Activities/Create.vue": () => import("./assets/Create-BvbIkeQa.js"),
-		"./Pages/Internal/Activities/Edit.vue": () => import("./assets/Edit-DX2JU44s.js"),
-		"./Pages/Internal/Activities/Index.vue": () => import("./assets/Index-BGmvaUg5.js"),
-		"./Pages/Internal/Activities/Show.vue": () => import("./assets/Show-B25NAJTk.js"),
-		"./Pages/Internal/Competitions/Create.vue": () => import("./assets/Create-CIe_IuuP.js"),
-		"./Pages/Internal/Competitions/Edit.vue": () => import("./assets/Edit-DDQ53X2U.js"),
-		"./Pages/Internal/Competitions/Index.vue": () => import("./assets/Index-DVrSGOM7.js"),
-		"./Pages/Internal/Competitions/Show.vue": () => import("./assets/Show-DYnoF361.js"),
-		"./Pages/Internal/Dashboard.vue": () => import("./assets/Dashboard-DMrMFJL0.js"),
-		"./Pages/Internal/FieldChanges/Index.vue": () => import("./assets/Index-zJmhL3-o.js"),
-		"./Pages/Internal/Media/Index.vue": () => import("./assets/Index-Bf2ZBOIg.js"),
-		"./Pages/Internal/Meetings/Create.vue": () => import("./assets/Create-DinVFxf_.js"),
-		"./Pages/Internal/Meetings/Edit.vue": () => import("./assets/Edit-DcVTct7s.js"),
-		"./Pages/Internal/Meetings/Index.vue": () => import("./assets/Index-BJKzJMbV2.js"),
-		"./Pages/Internal/MenuItem/Create.vue": () => import("./assets/Create-D9e6Rpo7.js"),
-		"./Pages/Internal/MenuItem/Edit.vue": () => import("./assets/Edit-DeS9iyY6.js"),
-		"./Pages/Internal/MenuItem/Index.vue": () => import("./assets/Index-C357mIA4.js"),
-		"./Pages/Internal/PageViews/Index.vue": () => import("./assets/Index-DccmxaIl.js"),
-		"./Pages/Internal/Pages/Create.vue": () => import("./assets/Create-CfR9cmOA.js"),
-		"./Pages/Internal/Pages/Edit.vue": () => import("./assets/Edit-17GuMPot.js"),
-		"./Pages/Internal/Pages/Index.vue": () => import("./assets/Index-DD4HK6U3.js"),
-		"./Pages/Internal/Posts/Create.vue": () => import("./assets/Create-KFJqJlny.js"),
-		"./Pages/Internal/Posts/Edit.vue": () => import("./assets/Edit-DoTCxElb.js"),
-		"./Pages/Internal/Posts/Index.vue": () => import("./assets/Index-DM0gcaW2.js"),
-		"./Pages/Page/Show.vue": () => import("./assets/Show-CcndnFHN.js"),
-		"./Pages/Post/Index.vue": () => import("./assets/Index-Dk0XwCXc.js"),
-		"./Pages/Post/Show.vue": () => import("./assets/Show-DKfKlDwG.js"),
-		"./Pages/Profile/Edit.vue": () => import("./assets/Edit-m609jO-v.js"),
-		"./Pages/Profile/Partials/DeleteUserForm.vue": () => import("./assets/DeleteUserForm-Bc4fIck0.js"),
-		"./Pages/Profile/Partials/UpdatePasswordForm.vue": () => import("./assets/UpdatePasswordForm-C8DXGgl1.js"),
-		"./Pages/Profile/Partials/UpdateProfileInformationForm.vue": () => import("./assets/UpdateProfileInformationForm-E-Y13urX.js")
+	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* #__PURE__ */ Object.assign({
+		"./Pages/Admin/Dashboard.vue": () => import("./assets/Dashboard-CPMercpB.js"),
+		"./Pages/Admin/Role/Create.vue": () => import("./assets/Create-vJB6r6HJ.js"),
+		"./Pages/Admin/Role/Index.vue": () => import("./assets/Index-CXSAxoMc.js"),
+		"./Pages/Admin/Role/Right/Index.vue": () => import("./assets/Index-BdwsJSNK.js"),
+		"./Pages/Admin/Role/Right/Partials/Groups.vue": () => import("./assets/Groups-DqI3EhUZ.js"),
+		"./Pages/Admin/Role/Show.vue": () => import("./assets/Show-BaYrVEWy.js"),
+		"./Pages/Admin/User/Edit.vue": () => import("./assets/Edit-NydTf3Cl.js"),
+		"./Pages/Admin/User/Index.vue": () => import("./assets/Index-BItUJs_e.js"),
+		"./Pages/Admin/User/Roles/Index.vue": () => import("./assets/Index-Dxuq65tO.js"),
+		"./Pages/Auth/ConfirmPassword.vue": () => import("./assets/ConfirmPassword-C8ajaSRl.js"),
+		"./Pages/Auth/ForgotPassword.vue": () => import("./assets/ForgotPassword-DFY6Fdv8.js"),
+		"./Pages/Auth/Login.vue": () => import("./assets/Login-v__PiW68.js"),
+		"./Pages/Auth/Register.vue": () => import("./assets/Register-B5kLHEIy.js"),
+		"./Pages/Auth/ResetPassword.vue": () => import("./assets/ResetPassword-C28wHjaI.js"),
+		"./Pages/Auth/VerifyEmail.vue": () => import("./assets/VerifyEmail-BpA095X8.js"),
+		"./Pages/Calendar/Index.vue": () => import("./assets/Index-BUdWThyH.js"),
+		"./Pages/Competition/Index.vue": () => import("./assets/Index-Csz4NwTH.js"),
+		"./Pages/Competition/Show.vue": () => import("./assets/Show-BvdzluZV.js"),
+		"./Pages/Home/Index.vue": () => import("./assets/Index-BWEx4Nmj.js"),
+		"./Pages/Home/Partials/About.vue": () => import("./assets/About-C8fVRlgC.js"),
+		"./Pages/Home/Partials/Contact.vue": () => import("./assets/Contact-CaVKwvEQ.js"),
+		"./Pages/Home/Partials/Events.vue": () => import("./assets/Events-BmUHUFXI.js"),
+		"./Pages/Home/Partials/Hero.vue": () => import("./assets/Hero-Cs8eSMka.js"),
+		"./Pages/Home/Partials/News.vue": () => import("./assets/News-DUYKnroA.js"),
+		"./Pages/Home/Partials/Services.vue": () => import("./assets/Services-SbgJRaFh.js"),
+		"./Pages/Home/Partials/Stats.vue": () => import("./assets/Stats-Cu1sTBA_.js"),
+		"./Pages/Home/Partials/Volunteer.vue": () => import("./assets/Volunteer-DW7Bd0vB.js"),
+		"./Pages/Internal/Activities/Create.vue": () => import("./assets/Create-Dtw_LkKr.js"),
+		"./Pages/Internal/Activities/Edit.vue": () => import("./assets/Edit-0i_5GGG2.js"),
+		"./Pages/Internal/Activities/Index.vue": () => import("./assets/Index-BXXJTh23.js"),
+		"./Pages/Internal/Activities/Show.vue": () => import("./assets/Show-e9e1SQHd.js"),
+		"./Pages/Internal/Competitions/Create.vue": () => import("./assets/Create-DGFSpByx.js"),
+		"./Pages/Internal/Competitions/Edit.vue": () => import("./assets/Edit-CRRKuF2Q.js"),
+		"./Pages/Internal/Competitions/Index.vue": () => import("./assets/Index-CAd8B5zh.js"),
+		"./Pages/Internal/Competitions/Show.vue": () => import("./assets/Show-DSsfKu3x.js"),
+		"./Pages/Internal/Dashboard.vue": () => import("./assets/Dashboard-DC0fwapU.js"),
+		"./Pages/Internal/FieldChanges/Index.vue": () => import("./assets/Index-t39VgjUn.js"),
+		"./Pages/Internal/Media/Index.vue": () => import("./assets/Index-CaExicMp.js"),
+		"./Pages/Internal/Meetings/Create.vue": () => import("./assets/Create-CNPbO240.js"),
+		"./Pages/Internal/Meetings/Edit.vue": () => import("./assets/Edit-DRCOzbFK.js"),
+		"./Pages/Internal/Meetings/Index.vue": () => import("./assets/Index-DFvJkm6m.js"),
+		"./Pages/Internal/MenuItem/Create.vue": () => import("./assets/Create-D66GePHO.js"),
+		"./Pages/Internal/MenuItem/Edit.vue": () => import("./assets/Edit-DeQaX2gw.js"),
+		"./Pages/Internal/MenuItem/Index.vue": () => import("./assets/Index-BMAgaszN.js"),
+		"./Pages/Internal/PageViews/Index.vue": () => import("./assets/Index-D2UFbgdk.js"),
+		"./Pages/Internal/Pages/Create.vue": () => import("./assets/Create-5sGx8Jhb.js"),
+		"./Pages/Internal/Pages/Edit.vue": () => import("./assets/Edit-CIq2hGri.js"),
+		"./Pages/Internal/Pages/Index.vue": () => import("./assets/Index-Di5ps2M7.js"),
+		"./Pages/Internal/Posts/Create.vue": () => import("./assets/Create-BQGH3IdA.js"),
+		"./Pages/Internal/Posts/Edit.vue": () => import("./assets/Edit-B0-f7NhL.js"),
+		"./Pages/Internal/Posts/Index.vue": () => import("./assets/Index-CZuRHKhb.js"),
+		"./Pages/Page/Show.vue": () => import("./assets/Show-DrEeJJln.js"),
+		"./Pages/Post/Index.vue": () => import("./assets/Index-DgmBSOuu.js"),
+		"./Pages/Post/Show.vue": () => import("./assets/Show-CnkKjBps.js"),
+		"./Pages/Profile/Edit.vue": () => import("./assets/Edit-uCUPsq2D.js"),
+		"./Pages/Profile/Partials/DeleteUserForm.vue": () => import("./assets/DeleteUserForm-458m9Xm2.js"),
+		"./Pages/Profile/Partials/UpdatePasswordForm.vue": () => import("./assets/UpdatePasswordForm-Ck_FGH9z.js"),
+		"./Pages/Profile/Partials/UpdateProfileInformationForm.vue": () => import("./assets/UpdateProfileInformationForm-DHTcIyaL.js")
 	})),
 	setup({ App, props, plugin }) {
 		return createSSRApp({ render: () => h(App, props) }).use(plugin).use(M, {
